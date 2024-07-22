@@ -1,0 +1,322 @@
+// Variables for colors and breakpoints
+$primary-color: #fffd49;
+$primary-color-hover: #fffeb14b;
+$secondary-color: #848d62;
+$secondary-color-hover: #848d627c;
+$bg-color-one: #7a7a53;
+$bg-color-two: #faf2e9;
+$bg-color-three: #979c73;
+$bg-color-four: #848d62;
+$font-family-sans: Arial, Helvetica, sans-serif;
+$font-family-serif: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+$font-family-cursive: "Lobster", cursive;
+
+@mixin responsive($property, $value) {
+  @media (max-width: 768px) {
+    #{$property}: $value;
+  }
+}
+
+// Section One
+.sectionone {
+  background-color: $bg-color-one;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh; // Full height
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // Cover the entire area without distorting the image
+    }
+
+    .text-anais {
+      color: $primary-color;
+      font-size: 1.5rem;
+      position: absolute;
+      left: 5%;
+      top: 5%;
+      margin: 0;
+      text-align: left;
+      @include responsive(font-size, 1rem);
+    }
+
+    .text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+
+      .text-capsule {
+        color: $primary-color;
+        font-family: $font-family-sans;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        @include responsive(font-size, 2rem);
+      }
+
+      .shop-now-btn {
+        color: $primary-color;
+        border: 2px solid $primary-color;
+        border-radius: 10%;
+        background-color: transparent;
+        padding: 10px 20px;
+        font-size: 1rem;
+        @include responsive(font-size, 0.8rem);
+
+        &:hover {
+          background-color: $primary-color-hover;
+          color: #fff;
+        }
+      }
+    }
+
+    .text-spring {
+      color: $primary-color;
+      position: absolute;
+      right: 5%;
+      top: 90%;
+      font-family: $font-family-cursive;
+    }
+  }
+}
+
+// Section Two
+.sectiontwo {
+  background-color: $bg-color-two;
+  padding: 10% 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .photo-two {
+    width: 30%;
+    height: auto;
+    padding-left: 10px;
+  }
+
+  .photo-three {
+    width: 100%;
+    height: auto;
+  }
+
+  .f-f-f {
+    color: $secondary-color;
+    font-size: 1.5em;
+    font-family: $font-family-serif;
+  }
+
+  .lookbook {
+    color: $secondary-color;
+    font-size: 0.5em;
+  }
+
+  .linen-text {
+    color: $secondary-color;
+    text-align: right;
+    padding: 0 15px 0 20px;
+    font-family: $font-family-serif;
+  }
+}
+
+// Section Three
+.section-three {
+  background-color: $bg-color-three;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .text-bright {
+    color: $primary-color;
+    font-size: 2.1em;
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    margin: 0;
+    @include responsive(font-size, 1.5em);
+  }
+
+  .text-sheer {
+    color: $primary-color;
+    font-size: 0.7em;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    margin: 0;
+    text-align: right;
+    @include responsive(font-size, 0.5em);
+  }
+
+  .image-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
+    .image-four {
+      width: 100%;
+      height: auto;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// Section Four
+.section-four {
+  background-color: $bg-color-two;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 60px 0 80px;
+
+  .text-silk {
+    color: $secondary-color;
+    font-size: 0.7em;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    margin: 0;
+    text-align: right;
+  }
+
+  .image-container {
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
+    .image-five,
+    .image-six {
+      width: 60%;
+      height: auto;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// Section Five
+.section-five {
+  background-color: $bg-color-four;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 50px 0;
+
+  .text-fun {
+    color: $bg-color-two;
+    font-size: 2.1em;
+    position: absolute;
+    left: 10%;
+    bottom: 1%;
+    margin: 0;
+    @include responsive(font-size, 1.5em);
+  }
+
+  .text-knitted {
+    color: $bg-color-two;
+    font-size: 0.7em;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    margin: 0;
+    text-align: right;
+    @include responsive(font-size, 0.5em);
+  }
+
+  .image-container {
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
+    .image-seven,
+    .image-eight {
+      width: 70%;
+      height: auto;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// Section Six
+.section-six {
+  background-color: $bg-color-two;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 100px 0;
+
+  .text-spring-forward {
+    color: $secondary-color;
+    font-size: 2.5em;
+    margin: 0;
+    text-align: center;
+    padding-bottom: 5px;
+    @include responsive(font-size, 2em);
+  }
+
+  .text-get {
+    color: $secondary-color;
+    font-size: 1.2em;
+    margin: 0;
+    text-align: center;
+    padding-bottom: 5px;
+    @include responsive(font-size, 1em);
+  }
+
+  .sign-up-btn {
+    color: $secondary-color;
+    border: 1px solid $secondary-color;
+    border-radius: 10%;
+    background-color: transparent;
+    padding: 5px 10px;
+    font-size: 1rem;
+    @include responsive(font-size, 0.8rem);
+
+    &:hover {
+      background-color: $secondary-color-hover;
+      color: #fff;
+    }
+  }
+
+  .text-address,
+  .text-domain-address {
+    color: $secondary-color;
+    font-size: 0.7em;
+    margin: 0;
+    text-align: center;
+    padding-top: 40px;
+
+    &.text-domain-address {
+      padding-top: 10px;
+    }
+  }
+}
